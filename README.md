@@ -10,6 +10,123 @@
 注意: 这里面算法思想重要,可以用API,而不是手写多余没用东西
 ```
 
+### 单词搜索 Ⅱ (又是很难得题)
+
+![image-20210213160647593](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210213160647593.png)
+
+![image-20210213160700717](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210213160700717.png)
+
+[看参考答案吧,太难了](https://leetcode-cn.com/problems/word-search-ii/solution/dan-ci-sou-suo-ii-by-leetcode/)
+
+#### 给个评论区优化后的代码
+
+```go
+//利用前缀树剪枝，优化DFS回溯  
+
+// 前缀树（字典树）结点
+    private static class TrieNode {
+        TrieNode[] paths; // 因为题目规定只有小写字母，创建长度26的数组即可
+        int end; // 前缀树【以当前字符结尾的单词的数量】
+        int pass; // 前缀树【通过当前字符的单词的数量】
+
+        public TrieNode() {
+            paths = new TrieNode[26];
+            end = 0;
+            pass = 0;
+        }
+    }
+
+    public static List<String> findWords(char[][] board, String[] words) {
+        ArrayList<String> ans = new ArrayList<>();
+        if (board == null || words == null || board.length == 0) return ans;
+
+        int N = board.length;
+        int M = board[0].length;
+        HashSet<String> foundWords = new HashSet<>(); // 收集到的单词
+
+        TrieNode root = buildTrieTree(words); // 根据单词表，构建前缀树
+
+        // 尝试从每个位置出发，玩深度优先遍历（回溯），沿途收集单词放入foundWords
+        // 通过前缀树【剪枝】优化
+        for (int row = 0; row < N; row++) {
+            for (int col = 0; col < M; col++) {
+                LinkedList<Character> path = new LinkedList<>();
+                boolean[][] access = new boolean[N][M]; // 标记是否访问过
+                findWords(board, root, foundWords, row, col, path, access); // 从(row,col)出发，走出的单词放入foundWords
+            }
+        }
+
+        return new ArrayList<>(foundWords);
+    }
+
+    // 当前来到board[row][col]位置，前面沿途走过的路径放在path中，走出的单词放入foundWords中
+    // 当前在前缀树上走到pre上
+    // 【返回本条DFS路径深度遍历总共走出了多少单词】
+    private static int findWords(char[][] board, TrieNode pre, HashSet<String> foundWords,
+                                  int row, int col, LinkedList<Character> path, boolean[][] access) {
+        if (row < 0 || row >= board.length || col < 0 || col >= board[0].length) return 0;
+
+        if (access[row][col]) return 0; // 已经走过这个位置 【不走回头路】
+
+        char curChar = board[row][col]; // 当前迈上的字符
+        if (pre.paths[curChar - 'a'] == null) return 0; // 【剪枝】没有这条路，当前尝试的路径走不下去了 
+        if (pre.paths[curChar - 'a'].pass == 0) return 0; // 【剪枝】【有这条路，但是这条路上的单词之前都已经加入过了，无需再走下去】 
+
+        TrieNode cur = pre.paths[curChar - 'a']; // 有这条路，走上去
+        access[row][col] = true; // 访问了这个位置
+        path.add(curChar); // 当前字符加入路径中
+        int count = 0; // 搜出的单词数量
+
+        if (cur.end > 0) { // 发现一个单词，收集
+            foundWords.add(toWord(path));
+            cur.end--; // 【收集完，end减1】
+            count++; // 【搜索出1个单词】
+        }
+
+        int p1 = findWords(board, cur, foundWords, row-1, col, path, access); // 往上走
+        int p2 = findWords(board, cur, foundWords, row+1, col, path, access); // 往下走
+        int p3 = findWords(board, cur, foundWords, row, col-1, path, access); // 往左走
+        int p4 = findWords(board, cur, foundWords, row, col+1, path, access); // 往右走
+
+        path.removeLast(); // 轨迹擦除
+        access[row][col] = false; // 走过一条DFS路径后 【恢复现场】
+        count += (p1 + p2 + p3 + p4);
+        cur.pass -= count; // 【前缀树上pass值更新】
+        return count;
+    }
+
+    // 根据单词表，构建前缀树
+    private static TrieNode buildTrieTree(String[] words) {
+        TrieNode root = new TrieNode();
+
+        for (String word : words) {
+            TrieNode cur = root;
+            for (char c : word.toCharArray()) {
+                int path = c - 'a';
+                if (cur.paths[path] == null) { // 当前cur结点没有这条路
+                    cur.paths[path] = new TrieNode(); // 新建这条路
+                }
+                cur = cur.paths[path]; // cur走到这条路上
+                cur.pass++;
+            }
+            cur.end++; // 有一个单词以cur结尾
+        }
+
+        return root;
+    }
+
+    private static String toWord(LinkedList<Character> path) {
+        char[] chars = new char[path.size()];
+        int i = 0;
+        for (char c : path) {
+            chars[i++] = c;
+        }
+        return new String(chars);
+    }
+```
+
+
+
 ###  实现Trie(前缀树)
 
 ![image-20210211123816216](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210211123816216.png)
