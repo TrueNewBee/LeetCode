@@ -10,6 +10,36 @@
 注意: 这里面算法思想重要,可以用API,而不是手写多余没用东西
 ```
 
+### 有效的字母异位词
+
+#### 2021-02-15 10:19:17(多想想API,而不是手写底层,拜托)
+
+![image-20210215101923699](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210215101923699.png)
+
+
+
+![image-20210215101956199](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210215101956199.png)
+
+```java
+
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        char[] str1 = s.toCharArray();
+        char[] str2 = t.toCharArray();
+        Arrays.sort(str1);
+        Arrays.sort(str2);
+        return Arrays.equals(str1, str2);
+    }
+}
+
+
+```
+
+
+
 ### 单词搜索 Ⅱ (又是很难得题)
 
 ![image-20210213160647593](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210213160647593.png)
