@@ -10,6 +10,41 @@
 注意: 这里面算法思想重要,可以用API,而不是手写多余没用东西
 ```
 
+
+
+### 字符串中的第一个唯一字符
+
+**2021-02-17 11:00:41**  **简单题重拳出击!**
+
+![image-20210217110017055](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210217110017055.png)
+
+```java
+class Solution {
+
+public int firstUniqChar(String s) {
+       int[] arr = new int[26];
+        int n = s.length();
+        for (int i = 0; i < n; i++) {
+            // chaAt() 是返回的AIIC码,-'a'是为了得到下标
+            // 先遍历字符串, 由于已知为小写字母,故做一个标记
+            // 标记:  字符串每个字母到a的距离,然后再做一次遍历
+            // 如果有重复的字母, +1 
+            arr[s.charAt(i)-'a']++ ;
+            
+        }
+        for (int i = 0; i < n; i++) {
+            if (arr[s.charAt(i)-'a'] == 1) {
+                // 如果数组=1 ,返回下标
+                return i;
+            }
+        }
+        return -1;
+    }
+} 
+```
+
+
+
 ### 有效的字母异位词
 
 #### 2021-02-15 10:19:17(多想想API,而不是手写底层,拜托)
