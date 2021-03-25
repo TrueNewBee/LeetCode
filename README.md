@@ -10,6 +10,151 @@
 注意: 这里面算法思想重要,可以用API,而不是手写多余没用东西
 ```
 
+``一直在忙着java学习和面试,少了刷题时间! 每天早起半小时/晚上1h刷题``
+
+###  双指针
+
+![image-20210325164324007](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210325164324007.png)
+
+```java
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int n = nums.length, left = 0, right = 0;
+        while (right < n) {
+            if (nums[right] != 0) {
+                swap(nums, left, right);
+                left++;
+            }
+            right++;
+        }
+    }
+
+    public void swap(int[] nums, int left, int right) {
+        int temp = nums[left];
+        nums[left] = nums[right];
+        nums[right] = temp;
+    }
+}
+
+```
+
+![image-20210325164410737](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210325164410737.png)
+
+
+
+### 数组中是否存在重复元素
+
+**2021-03-24 14:15:15**
+
+![image-20210324141519082](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210324141519082.png)
+
+![image-20210324141544299](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210324141544299.png)
+
+```java
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        Arrays.sort(nums);
+        int n = nums.length;
+        for (int i = 0; i < n - 1; i++) {
+            if (nums[i] == nums[i + 1]) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+```
+
+![image-20210324141616105](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210324141616105.png)
+
+方法二
+
+### 哈希表
+
+对于数组中每个元素，我们将它插入到哈希表中。如果插入一个元素时发现该元素已经存在于哈希表中，则说明存在重复的元素。
+
+```java
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        Set<Integer> set = new HashSet<Integer>();
+        for (int x : nums) {
+            if (!set.add(x)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+```
+
+![image-20210324141650618](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210324141650618.png)
+
+
+
+### 旋转数组
+
+#### 2021-02-25 11:02:22 
+
+![image-20210225104528957](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210225104528957.png)
+
+```java
+我的想法就是,从后向前找到k个元素,依次头插到最前面, 下面方法1就类似于我说的那样
+```
+
+![image-20210225104728957](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210225104728957.png)
+
+![image-20210225104910000](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210225104910000.png)
+
+### 多数元素
+
+![image-20210222110611834](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210222110611834.png)
+
+
+
+![image-20210222110652647](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210222110652647.png)
+
+
+
+```java
+
+class Solution {
+    public int majorityElement(int[] nums) {
+        Arrays.sort(nums);
+        return nums[nums.length / 2];
+    }
+}
+
+```
+
+
+
+### 乘积最大子数组
+
+#### 2021-02-20 10:33:44  
+
+看解析都没看懂的题!  直接放上连接,  [乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray/solution/cheng-ji-zui-da-zi-shu-zu-by-leetcode-solution/)
+
+![image-20210220103327968](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210220103327968.png)
+
+```java
+
+class Solution {
+    public int maxProduct(int[] nums) {
+        int maxF = nums[0], minF = nums[0], ans = nums[0];
+        int length = nums.length;
+        for (int i = 1; i < length; ++i) {
+            int mx = maxF, mn = minF;
+            maxF = Math.max(mx * nums[i], Math.max(nums[i], mn * nums[i]));
+            minF = Math.min(mn * nums[i], Math.min(nums[i], mx * nums[i]));
+            ans = Math.max(maxF, ans);
+        }
+        return ans;
+    }
+}
+```
+
+
+
 ### 反转字符串
 
 **2021-02-18 09:29:10** **简单题重拳出击!**
