@@ -12,6 +12,60 @@
 
 ``一直在忙着java学习和面试,少了刷题时间! 每天早起半小时/晚上1h刷题``
 
+### 打乱数组 (2021-03-26 10:17:57)
+
+![image-20210326101625676](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210326101625676.png)
+
+#### 洗牌算法 Fisher-Yates
+
+![image-20210326101658606](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210326101658606.png)
+
+![image-20210326101730525](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210326101730525.png)
+
+
+
+```java
+class Solution {
+    private int[] array;
+    private int[] original;
+
+    Random rand = new Random();
+
+    private int randRange(int min, int max) {
+        return rand.nextInt(max - min) + min;
+    }
+
+    private void swapAt(int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+    public Solution(int[] nums) {
+        array = nums;
+        original = nums.clone();
+    }
+    
+    public int[] reset() {
+        array = original;
+        original = original.clone();
+        return original;
+    }
+    
+    public int[] shuffle() {
+        for (int i = 0; i < array.length; i++) {
+            swapAt(i, randRange(i, array.length));
+        }
+        return array;
+    }
+}
+
+```
+
+![image-20210326101744011](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210326101744011.png)
+
+
+
 ###  双指针
 
 ![image-20210325164324007](C:\Users\Administrator\Desktop\LeetCode\README.assets\image-20210325164324007.png)
