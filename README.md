@@ -14,13 +14,13 @@
 
 ### 打乱数组 (2021-03-26 10:17:57)
 
-![image-20210326101625676]( \README.assets\image-20210326101625676.png)
+![image-20210326101625676]( .\README.assets\image-20210326101625676.png)
 
 #### 洗牌算法 Fisher-Yates
 
-![image-20210326101658606]( \README.assets\image-20210326101658606.png)
+![image-20210326101658606]( .\README.assets\image-20210326101658606.png)
 
-![image-20210326101730525]( \README.assets\image-20210326101730525.png)
+![image-20210326101730525]( .\README.assets\image-20210326101730525.png)
 
 
 
@@ -62,13 +62,13 @@ class Solution {
 
 ```
 
-![image-20210326101744011]( \README.assets\image-20210326101744011.png)
+![image-20210326101744011]( .\README.assets\image-20210326101744011.png)
 
 
 
 ###  双指针
 
-![image-20210325164324007]( \README.assets\image-20210325164324007.png)
+![image-20210325164324007]( .\README.assets\image-20210325164324007.png)
 
 ```java
 class Solution {
@@ -92,7 +92,7 @@ class Solution {
 
 ```
 
-![image-20210325164410737]( \README.assets\image-20210325164410737.png)
+![image-20210325164410737]( .\README.assets\image-20210325164410737.png)
 
 
 
@@ -100,9 +100,9 @@ class Solution {
 
 **2021-03-24 14:15:15**
 
-![image-20210324141519082]( \README.assets\image-20210324141519082.png)
+![image-20210324141519082]( .\README.assets\image-20210324141519082.png)
 
-![image-20210324141544299]( \README.assets\image-20210324141544299.png)
+![image-20210324141544299]( .\README.assets\image-20210324141544299.png)
 
 ```java
 class Solution {
@@ -119,7 +119,7 @@ class Solution {
 }
 ```
 
-![image-20210324141616105]( \README.assets\image-20210324141616105.png)
+![image-20210324141616105]( .\README.assets\image-20210324141616105.png)
 
 方法二
 
@@ -141,7 +141,7 @@ class Solution {
 }
 ```
 
-![image-20210324141650618]( \README.assets\image-20210324141650618.png)
+![image-20210324141650618]( .\README.assets\image-20210324141650618.png)
 
 
 
@@ -149,23 +149,23 @@ class Solution {
 
 #### 2021-02-25 11:02:22 
 
-![image-20210225104528957]( \README.assets\image-20210225104528957.png)
+![image-20210225104528957]( .\README.assets\image-20210225104528957.png)
 
 ```java
 我的想法就是,从后向前找到k个元素,依次头插到最前面, 下面方法1就类似于我说的那样
 ```
 
-![image-20210225104728957]( \README.assets\image-20210225104728957.png)
+![image-20210225104728957]( .\README.assets\image-20210225104728957.png)
 
-![image-20210225104910000]( \README.assets\image-20210225104910000.png)
+![image-20210225104910000]( .\README.assets\image-20210225104910000.png)
 
 ### 多数元素
 
-![image-20210222110611834]( \README.assets\image-20210222110611834.png)
+![image-20210222110611834]( .\README.assets\image-20210222110611834.png)
 
 
 
-![image-20210222110652647]( \README.assets\image-20210222110652647.png)
+![image-20210222110652647]( .\README.assets\image-20210222110652647.png)
 
 
 
@@ -188,7 +188,7 @@ class Solution {
 
 看解析都没看懂的题!  直接放上连接,  [乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray/solution/cheng-ji-zui-da-zi-shu-zu-by-leetcode-solution/)
 
-![image-20210220103327968]( \README.assets\image-20210220103327968.png)
+![image-20210220103327968]( .\README.assets\image-20210220103327968.png)
 
 ```java
 
@@ -213,9 +213,9 @@ class Solution {
 
 **2021-02-18 09:29:10** **简单题重拳出击!**
 
-![image-20210218092941061]( \README.assets\image-20210218092941061.png)
+![image-20210218092941061]( .\README.assets\image-20210218092941061.png)
 
-![image-20210218093004944]( \README.assets\image-20210218093004944.png)
+![image-20210218093004944]( .\README.assets\image-20210218093004944.png)
 
 **代码**
 
@@ -238,7 +238,7 @@ class Solution {
 
 **2021-02-17 11:00:41**  **简单题重拳出击!**
 
-![image-20210217110017055]( \README.assets\image-20210217110017055.png)
+![image-20210217110017055]( .\README.assets\image-20210217110017055.png)
 
 ```java
 class Solution {
@@ -271,11 +271,11 @@ public int firstUniqChar(String s) {
 
 #### 2021-02-15 10:19:17(多想想API,而不是手写底层,拜托)
 
-![image-20210215101923699]( \README.assets\image-20210215101923699.png)
+![image-20210215101923699]( .\README.assets\image-20210215101923699.png)
 
 
 
-![image-20210215101956199]( \README.assets\image-20210215101956199.png)
+![image-20210215101956199]( .\README.assets\image-20210215101956199.png)
 
 ```java
 
@@ -299,9 +299,9 @@ class Solution {
 
 ### 单词搜索 Ⅱ (又是很难得题)
 
-![image-20210213160647593]( \README.assets\image-20210213160647593.png)
+![image-20210213160647593]( .\README.assets\image-20210213160647593.png)
 
-![image-20210213160700717]( \README.assets\image-20210213160700717.png)
+![image-20210213160700717]( .\README.assets\image-20210213160700717.png)
 
 [看参考答案吧,太难了](https://leetcode-cn.com/problems/word-search-ii/solution/dan-ci-sou-suo-ii-by-leetcode/)
 
@@ -416,7 +416,7 @@ class Solution {
 
 ###  实现Trie(前缀树)
 
-![image-20210211123816216]( \README.assets\image-20210211123816216.png)
+![image-20210211123816216]( .\README.assets\image-20210211123816216.png)
 
 [Trie树的官方解析!!!](https://leetcode-cn.com/problems/implement-trie-prefix-tree/solution/shi-xian-trie-qian-zhui-shu-by-leetcode/)
 
@@ -583,9 +583,9 @@ class Trie {
 
 **2021-02-08 09:57:51**
 
-![image-20210208095757131]( \README.assets\image-20210208095757131.png)
+![image-20210208095757131]( .\README.assets\image-20210208095757131.png)
 
-![image-20210208095830506]( \README.assets\image-20210208095830506.png)
+![image-20210208095830506]( .\README.assets\image-20210208095830506.png)
 
 ```java
 func wordBreak(s string, wordDict []string) (sentences []string) {
@@ -625,7 +625,7 @@ func wordBreak(s string, wordDict []string) (sentences []string) {
 
 ```
 
-![image-20210208095846707]( \README.assets\image-20210208095846707.png)
+![image-20210208095846707]( .\README.assets\image-20210208095846707.png)
 
 
 
@@ -633,11 +633,11 @@ func wordBreak(s string, wordDict []string) (sentences []string) {
 
 #### 2021-02-07 10:46:09
 
-![image-20210207104614655]( \README.assets\image-20210207104614655.png)
+![image-20210207104614655]( .\README.assets\image-20210207104614655.png)
 
 #### 解析
 
-![image-20210207104641737]( \README.assets\image-20210207104641737.png)
+![image-20210207104641737]( .\README.assets\image-20210207104641737.png)
 
 ``` java
 public class Solution {
@@ -679,21 +679,21 @@ func wordBreak(s string, wordDict []string) bool {
 }
 ```
 
-![image-20210207104735766]( \README.assets\image-20210207104735766.png)
+![image-20210207104735766]( .\README.assets\image-20210207104735766.png)
 
 ### 分割回文串
 
 #### 2021-02-02 10:52:00
 
-![image-20210202105213955]( \README.assets\image-20210202105213955.png)
+![image-20210202105213955]( .\README.assets\image-20210202105213955.png)
 
 ### 竟然用到了深度优先遍历
 
 这个 算法 很秀!
 
-![image-20210202105256943]( \README.assets\image-20210202105256943.png)
+![image-20210202105256943]( .\README.assets\image-20210202105256943.png)
 
-![image-20210202105312377]( \README.assets\image-20210202105312377.png)
+![image-20210202105312377]( .\README.assets\image-20210202105312377.png)
 
 ### 方法一：回溯
 
@@ -840,7 +840,7 @@ public class Solution {
 
 **2021-02-01 10:12:15**
 
-![image-20210201101249997]( \README.assets\image-20210201101249997.png)
+![image-20210201101249997]( .\README.assets\image-20210201101249997.png)
 
 ```java
 class Solution {
@@ -860,9 +860,9 @@ class Solution {
 
 ```
 
-![image-20210201101345397]( \README.assets\image-20210201101345397.png)
+![image-20210201101345397]( .\README.assets\image-20210201101345397.png)
 
-![image-20210201101402843]( \README.assets\image-20210201101402843.png)
+![image-20210201101402843]( .\README.assets\image-20210201101402843.png)
 
 ```java
 class Solution {
@@ -896,7 +896,7 @@ class Solution {
 
 **2021-01-30 10:22:40**
 
-![image-20210130102123090]( \README.assets\image-20210130102123090.png)
+![image-20210130102123090]( .\README.assets\image-20210130102123090.png)
 
 ```go
 可以明确的一点是，面试算法题目在难度上（尤其是代码难度上）会略低一些，倾向于考察一些基础数据结构与算法，对于高级算法和奇技淫巧一般不作考察。
@@ -906,7 +906,7 @@ class Solution {
 以上这两类问题，出现的频率不会很高，即使出现了也应该是面试中的简单部分，相信一定难不倒在座的各位。
 ```
 
-![image-20210130102226464]( \README.assets\image-20210130102226464.png)
+![image-20210130102226464]( .\README.assets\image-20210130102226464.png)
 
 #### 越努力,越幸运!
 
@@ -916,13 +916,13 @@ class Solution {
 
 这尼玛是谷歌经典面试题,超难那种,,直接放上解析了
 
-![image-20210127114016387]( \README.assets\image-20210127114016387.png)
+![image-20210127114016387]( .\README.assets\image-20210127114016387.png)
 
 **解析:** 
 
-![image-20210127114107157]( \README.assets\image-20210127114107157.png)
+![image-20210127114107157]( .\README.assets\image-20210127114107157.png)
 
-​	![image-20210127114148989]( \README.assets\image-20210127114148989.png)
+​	![image-20210127114148989]( .\README.assets\image-20210127114148989.png)
 
 代码
 
@@ -1005,7 +1005,7 @@ class Solution:
 
 ```
 
-![image-20210127114256995]( \README.assets\image-20210127114256995.png)
+![image-20210127114256995]( .\README.assets\image-20210127114256995.png)
 
 ### 合并两个有序数组(4)
 
@@ -1013,7 +1013,7 @@ class Solution:
 
 
 
-![image-20210126103457313]( \README.assets\image-20210126103457313.png)
+![image-20210126103457313]( .\README.assets\image-20210126103457313.png)
 
 0. 贴上自己的思路代码(思路对,代码错)
 
@@ -1030,7 +1030,7 @@ class Solution:
 
 1. ####  双指针 / 从前往后
 
-   ![image-20210126103601874]( \README.assets\image-20210126103601874.png)
+   ![image-20210126103601874]( .\README.assets\image-20210126103601874.png)
 
    **代码:**
 
@@ -1079,7 +1079,7 @@ class Solution:
 
    
 
-   ![image-20210126103744353]( \README.assets\image-20210126103744353.png)
+   ![image-20210126103744353]( .\README.assets\image-20210126103744353.png)
 
    ```java
    class Solution {
@@ -1110,9 +1110,9 @@ class Solution:
 
 每日一题,开阔视野
 
-![image-20210125112352722]( \README.assets\image-20210125112352722.png)
+![image-20210125112352722]( .\README.assets\image-20210125112352722.png)
 
-![image-20210125112407035]( \README.assets\image-20210125112407035.png)
+![image-20210125112407035]( .\README.assets\image-20210125112407035.png)
 
 **解析**:
 
@@ -1168,7 +1168,7 @@ class Solution:
 
 2021-01-24 11:25:00
 
-![image-20210124102026067]( \README.assets\image-20210124102026067.png)
+![image-20210124102026067]( .\README.assets\image-20210124102026067.png)
 
 ```go
 func majorityElement(nums []int) int {
@@ -1185,7 +1185,7 @@ func majorityElement(nums []int) int {
 
 **解析**
 
-![image-20210124102118587]( \README.assets\image-20210124102118587.png)
+![image-20210124102118587]( .\README.assets\image-20210124102118587.png)
 
 ```python
 class Solution:
@@ -1197,7 +1197,7 @@ class Solution:
 
 **解析2:摩尔投票法**
 
-![image-20210124102320836]( \README.assets\image-20210124102320836.png)
+![image-20210124102320836]( .\README.assets\image-20210124102320836.png)
 
 ```python
 class Solution:
@@ -1220,7 +1220,7 @@ class Solution:
 
 2021-01-23 21:06:19 
 
-解析:![image-20210123210620105]( \README.assets\image-20210123210620105.png)
+解析:![image-20210123210620105]( .\README.assets\image-20210123210620105.png)
 
 ***********
 
@@ -1237,7 +1237,7 @@ class Solution:
 
 *****************
 
-![image-20210123211157712]( \README.assets\image-20210123211157712.png)
+![image-20210123211157712]( .\README.assets\image-20210123211157712.png)
 
 ```go
 func singleNumber(nums []int) int {
